@@ -1,0 +1,42 @@
+Cập nhật và nâng cấp: 
+
+sudo apt update && sudo apt upgrade -y
+ cài thư viện picamera2:
+sudo apt install -y python3-picamera2
+(nếu xóa:
+sudo apt remove python3-picamera2
+sudo apt autoremove)
+nếu kiểm tra:pip show picamera2
+
+tải yolov5:
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+
+tạo môi trường ảo python:
+
+python3 -m venv --system-site-package venv
+
+kích hoạt môi trường ảo đã tạo:
+
+source venv/bin/activate
+
+trong môi trường ảo 
+cài torch: pip install torch
+cài ultralytics:pip install ultralytics
+Cài simplejpeg: pip install --force-reinstall --no-cache-dir simple jpeg
+cài seaborn:pip install seaborn
+nên cài thêm cái này nếu bị lỗi :(requirements: Ultralytics requirements ['gitpython>=3.1.30', 'pillow>=10.3.0', 'requests>=2.32.2', 'tqdm>=4.66.3', 'setuptools>=70.0.0'] not found, attempting AutoUpdate...)
+pip install gitpython
+pip install --upgrade --force-reinstall pillow
+pip install --upgrade --force-reinstall requests
+pip install --upgrade --force-reinstall tqdm
+pip install --upgrade --force-reinstall --no-cache-dir setuptools
+
+
+
+
+Chạy chương trình đã viết trong thư mục yolov5
+
+
+
+
